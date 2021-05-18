@@ -1,7 +1,13 @@
 const createTranspileModulesPlugin = require("next-transpile-modules");
 
 const withTranspiledModules = createTranspileModulesPlugin(
-  ["xdm", "unist-util-position-from-estree"],
+  [
+    "xdm",
+    "unist-util-position-from-estree",
+    "estree-util-build-jsx",
+    "estree-util-is-identifier-name",
+    "periscopic",
+  ],
   {
     resolveSymlinks: true,
   }
